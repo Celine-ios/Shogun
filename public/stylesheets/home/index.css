@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
 html {
 	font-size: 20px;
 }
@@ -7,6 +9,7 @@ body {
 	margin: 0;
 	margin-top: -2%;
 	background: -moz-linear-gradient(left, rgba(255,76,76,1) 0%, rgba(61,13,255,1) 100%);
+	transition: all 3s ease-in 10s;
 }
 .link {
 	text-decoration: none;
@@ -31,4 +34,16 @@ body {
 	font-family: 'Raleway', sans-serif;
 	text-align: center;
 }
+.textblock {
+	font-family: 'Raleway', sans-serif;
+}
+.textblock h2 {
+	font-family: 'Do Hyeon', sans-serif;
+}
+.icon {
+	display: flex;
+	justify-content: center;
+}
+
+
 
