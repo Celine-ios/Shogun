@@ -1,38 +1,45 @@
 doctype html
 html
 	head
-		title Fooda
+		title Shogun
 		link(rel="stylesheet")(href="stylesheets/home/index.css")
 		link(rel="stylesheet")(href="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/css/buttons.min.css")
 		script(src="javascripts/jquery/jquery-3.2.1.min.js")
 		script(src="javascripts/home/parallax/index.js")
-
+		link(rel="stylesheet")(href="animate.css/animate.css")
 	body
 		div.header
 			div.side
 				a.link(href="#")
-					span(style="color: #fff;") Acerca de Nosotros
+					h2.heading(style="color: #fff;") Nosotros
 			div.side
 				a.link(href="/login")
-					span(style="color: #fff;") Iniciar
+					h2.heading(style="color: #fff;") Iniciar
 		div.side-center
 			figure
 				img(src="img.jpg")
 		div.side-center(style="flex-direction: column;")
-			h1(style="font-weight: 900;margin-bottom: 20%;") El Único Servicio de Búsqueda de Productos en Venezuela 
+			h1.heading(style="margin-bottom: 20%;") El Único Servicio de Búsqueda de Productos en Venezuela 
 				br
 				small Busca cualquier producto en un pestañeo
 			div(style="display: flex; justify-content: center;")
-				a.button.button-border.button-large(href="#")(style="color: #fff;width: 20%;") Regístrate
+				a.button.button-border.button-large(href="/signup")(style="color: #fff;width: 20%;") Regístrate
 		section.side-center(style="background: #fff;")
-			div(style="display: flex; flex-direction: row;")
-				div.textblock(style="width: 30%;padding: 10%;text-align: center;")
+			div.row
+				div.textblock.col
 					div.icon
 						img.image(src="https://png.icons8.com/nolan/50/000000/organization.png")
 					h2 Compra sin Largas Filas
-					p Lorem ipsum dolorum, Lorem ipsum dolorum, Lorem ipsum dolorum, Lorem ipsum dolorum, Lorem ipsum dolorum, Lorem ipsum dolorum, Lorem ipsum dolorum
-				div.textblock(style="width: 30%;padding: 10%;text-align: center;")
+					p Sólo teclea en nuestro buscador el nombre de algún producto de la canasta básica y tendrás resultados instantáneos de la ubicación, cantidad disponible y precio del producto, puedes buscar en la ciudad del país que desees, no importa tu ubicación
+				div.textblock.col
 					div.icon
 						img.image(src="https://png.icons8.com/nolan/50/000000/search.png")
 					h2 Busca y Encuentra 
-					p Lorem ipsum dolorum, Lorem ipsum dolorum, Lorem ipsum dolorum, Lorem ipsum dolorum, Lorem ipsum dolorum, Lorem ipsum dolorum, Lorem ipsum dolorum
+					p Además de exterminar las colas, también puedes marcar como favorito un lugar o producto y manejar listas de precios y cantidad en inventario, además de, como comerciante, poder auspiciar lo que vendes en nuestra plataforma de manera gratuita
+		section.side-center(style="background: #fff;margin-top: 0;")
+			div(style="display:flex;flex-direction: row;width: 100%;")			
+				div.content
+					div.icon
+						img.image(src="https://png.icons8.com/nolan/50/000000/organization.png")
+				div.content
+					h1.animated.infinite.bounce.delay-10s ¡Espera Nuestra App!

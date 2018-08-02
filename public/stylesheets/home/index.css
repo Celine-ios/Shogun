@@ -11,6 +11,9 @@ body {
 	background: -moz-linear-gradient(left, rgba(255,76,76,1) 0%, rgba(61,13,255,1) 100%);
 	transition: all 3s ease-in 10s;
 }
+h1 {
+	color: black;
+}
 .link {
 	text-decoration: none;
 }
@@ -44,6 +47,39 @@ body {
 	display: flex;
 	justify-content: center;
 }
-
+.content {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	padding: 10%;
+}
+.content h1 {
+	color: black;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.col {
+	width: 30%;
+	padding: 10%;
+	text-align: center;
+}
+.heading {
+	font-weight: 900;
+}
+@media screen and (max-width: 400px) {
+	.row {
+		display: flex;
+		flex-direction: column;
+	}
+	.col {
+		width: 80%;
+		text-align: left;
+	}
+	.heading {
+		font-size: 1rem;
+	}
+}
 
 
