@@ -13,8 +13,62 @@ router.get('/signup', function(req, res, next) {
 	res.render('signup');
 });
 router.post('/login', function(req, res){
-   console.log(req.body);
-   res.send("received your request!");
+   var user = req.body;
+   if (!user.email && !user.password) {
+      res.render('login', {
+         status: 'void'
+      });
+   } else {
+      if (!user.email) {
+         res.render('login', {
+         status: 'e-void'
+         });
+      } else {
+         if (!user.password) {
+            res.render('login', {
+               status: 'p-void'
+            });
+         }
+      }
+   }
+
+   mongoose.connect('mongodb://localhost/shogun');
+   var userSchema = mongoose.Schema({
+      name: String,
+      email: String,
+      password: String
+      });
+      var User = mongoose.model('User', userSchema);
+      var result = User.find({$and: [
+            {"email": user.email}, {"password": user.password}
+         ]}, (err, response) => {
+            if (response) {
+               if (response.length == 0) {
+                  res.render('login', {
+                     status: 'logout'
+                  });
+               } else {
+                  res.render('dashboard', {
+                     status: 'logged',
+                     user: {
+                        name: response[0].name,
+                        email: response[0].email,
+                        password: response[0].password
+                     }
+                  });
+                  console.log(response);
+               }
+               
+            } else {
+               res.render('login', {
+                  status: 'db-error',
+                  details: err
+               })
+            }
+            
+         });
+      
+
 });
 router.post('/signup', function(req, res){
    var user = req.body;
@@ -26,7 +80,7 @@ router.post('/signup', function(req, res){
 
    		mongoose.connect('mongodb://localhost/shogun');
 
-   		var userSchema = mongoose.Schema({
+   	var userSchema = mongoose.Schema({
 		name: String,
 		email: String,
 		password: String
