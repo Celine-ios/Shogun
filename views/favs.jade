@@ -1,0 +1,10 @@
+doctype html
+html
+	head
+		title Zellet
+		link(rel="stylesheet" href="/stylesheets/favs/index.css")
+		link(rel="stylesheet" href="/onsenui/css/onsenui.css")
+		link(rel="stylesheet" href="/onsenui/css/onsen-css-components.min.css")
+		script(src="/onsenui/js/onsenui.min.js")
+	body
+		ons-button(onclick="ons.notification.prompt('How old are ?').then(function(age) {ons.notification.toast('You are ' + age + ' years old.', {timeout: 2000});});") Alertar

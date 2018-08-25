@@ -1,7 +1,17 @@
 var express = require('express');
 var mongoose = require('mongoose');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var router = express.Router();
 
+var app = express();
+
+app.use(cookieParser());
+app.use(session({
+    secret: 'user',
+    resave: false,
+    saveUninitialized: true
+}));
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -48,15 +58,15 @@ router.post('/login', function(req, res){
                      status: 'logout'
                   });
                } else {
-                  res.render('dashboard', {
-                     status: 'logged',
-                     user: {
-                        name: response[0].name,
-                        email: response[0].email,
-                        password: response[0].password
-                     }
-                  });
+
+                  // Setting up the session data
+                  session.username = response[0].name;
+                  session.email = response[0].email;
+                  session.password = response[0].password;
+
+                  res.redirect('/users');
                   console.log(response);
+
                }
                
             } else {
@@ -108,6 +118,9 @@ router.post('/signup', function(req, res){
    			}
    		});
    }
+});
+router.get('/nosotros', function(req, res) {
+   res.render('us');
 });
 
 module.exports = router;

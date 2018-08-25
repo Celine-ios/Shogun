@@ -1,0 +1,48 @@
+doctype html
+html
+	head
+		title Shogun
+		link(rel="stylesheet" href="/stylesheets/adjust/index.css")
+		link(rel="stylesheet" href="/stylesheets/header/index.css")
+		link(rel="stylesheet" href="/onsenui/css/onsenui.css")
+		link(rel="stylesheet" href="/onsenui/css/onsen-css-components.min.css")
+		script(src="/onsenui/js/onsenui.min.js")
+	body
+		header
+			div.logo
+			
+			div.profile(ondblclick="document.getElementsByClassName('tooltip')[0].style.visibility = 'hidden';document.getElementsByClassName('tooltip')[0].style.width = '0%';" onclick="document.getElementsByClassName('tooltip')[0].style.visibility = 'visible';document.getElementsByClassName('tooltip')[0].style.width = '20%';")
+				figure
+					img(src="https://png.icons8.com/ios/50/000000/user.png")
+				div.tooltip
+					a(href="/users/image") Imagen
+					hr
+					a(href="/users/") Volver
+		section.container
+			article
+				ons-list
+					ons-list-header Ajustes
+					ons-list-item
+						div.center Hola
+						div.right
+							ons-switch(checked)
+					ons-list-item
+						div.center Hola
+						div.right
+							ons-switch(checked)
+					ons-list-item
+						div.center Hola
+						div.right
+							ons-switch(checked)
+					ons-list-item
+						div.center Hola
+						div.right
+							ons-switch(checked)
+					ons-list-item
+						div.center Hola
+						div.right
+							ons-switch(checked)
+				br
+				ons-row(style="display: flex; justify-content: center;")
+					ons-col(style="display: flex; justify-content: center;")
+						ons-button Guardar

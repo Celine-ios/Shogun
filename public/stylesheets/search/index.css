@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #ddd3;
+}
+header {
+    background: #4776E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: #000000ad 0px 0px 10px;    
+}
+nav {
+	display: flex;
+	flex-direction: row;
+	height: 5em;
+}
+form {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	height: 5em;
+}
+nav .logo {
+    width: 13%;
+    padding: 1%;
+}
+nav .search {
+    width: 58%;
+    padding: 2%;
+    display: flex;
+    justify-content: flex-end;
+}
+nav .bar {
+    width: 26%;
+    padding: 1.6% 0%;
+    display: flex;
+    justify-content: flex-start;
+}
+.search input[type="search"] {
+	width: 80%;
+	height: 2em;
+	border: none;
+	border-radius: 1%;
+	transition: all .3s;
+	padding: 2%;
+}
+.search input[type="search"]:focus {
+	color: #fff;
+	background: transparent;
+}
+.results {
+	width: 92%;
+	margin: 2% 4%;
+	display: flex;
+	flex-direction: row;
+}
+.table {
+    width: 52%;
+    padding: 2%;
+    margin: 0% 2%;
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: .8%;
+}
+.aside {
+	width: 18%;
+	padding: 2%;
+	background: #fff;
+}
+.aside .box {
+	display: flex;
+	justify-content: center;
+	width: 98%;
+	padding: 2%;
+	border-radius: 2%;
+}
+.table .box {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    padding: 2%;
+    border-radius: 1%;
+    background: #fff;
+    margin: 4% 0%;
+}
+.box .title {
+	width: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+.title h3 {
+	margin: 2%;
+	font-family: 'Raleway', sans-serif;	
+}
+.box .details {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.details div {
+	width: 29.3%;
+	margin: 0% 2%;
+	font-family: 'Raleway', sans-serif;
+	font-size: .8em;
+	display: flex;
+	justify-content: center;
+	color: #ddd;
+}
+span a {
+	text-decoration: none;
+	color: #ddd;
+}
+span a:hover {
+	font-weight: bold;
+}
+@media screen and (max-width: 400px) {
+	.aside {
+		display: none;
+	}
+	.table {
+		width: 96%;
+	}
+	.table .box {
+		width: 96%;
+	}
+	.logo {
+		display: none;
+	}
+	nav .search {
+		width: 86%;
+		align-items: center;
+	}
+	.search input[type="search"] {
+		width: 96%;
+	}
+}

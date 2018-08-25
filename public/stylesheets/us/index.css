@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
+body {
+	background: #FFAFBD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(left, #ffc3a0, #FFAFBD);
+    background: -o-linear-gradient(left, #ffc3a0, #FFAFBD);
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+section {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	padding: 4% 0%;
+}
+h1, p, small {
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+}
+.preset-box {
+	display: flex;
+	padding: 2%;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 88%;
+}
+.preset-box div {
+	padding: 2%;
+}
+.image {
+	border-radius: 10%;
+}

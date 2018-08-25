@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
+.container {
+	display: flex;
+	justify-content: center;
+	margin-top: 8%;
+}
+.container article {
+	width: 58%;
+	padding: 2%;
+	box-shadow: #ddd 0px 0px 10px;
+}
+ons-row {
+	font-family: 'Raleway', sans-serif;
+}

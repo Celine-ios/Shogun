@@ -1,0 +1,68 @@
+doctype html
+head
+	title Shogun
+	link(rel="stylesheet")(href="/stylesheets/dashboard/index.css")
+	meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+body
+	header
+		div.logo
+			
+		div.profile(ondblclick="document.getElementsByClassName('tooltip')[0].style.visibility = 'hidden';document.getElementsByClassName('tooltip')[0].style.width = '0%';" onclick="document.getElementsByClassName('tooltip')[0].style.visibility = 'visible';document.getElementsByClassName('tooltip')[0].style.width = '20%';")
+			figure.profile-holder
+				img.profile-icon(src="/1040213-ui/png/043-settings.png")
+			div.tooltip
+				a(href="/users/image") Imagen
+				hr
+				a(href="/users/adjust") Ajustes
+	section.grid.three-col-four-row
+		div.item
+			div
+				figure
+					img(src="/1040213-ui/png/034-favourites.png")
+				a(href="/users/favs")
+					h1 Favoritos
+		div.item
+			div
+				figure
+					img(src="/1040213-ui/png/034-favourites.png")
+				a(href="/users/favorites")
+					h1 Favoritos
+		div.item
+			div
+				figure
+					img(src="/1040213-ui/png/008-shuffle.png")
+				a(href="/users/advertising")
+					h1 Publicidad
+		div.item
+			div
+				figure 
+					img(src="/1040213-ui/png/004-bookmarks.png")
+				a(href="/users/reviews")
+					h1 Reseñas
+		div.item
+			div
+				figure
+					img(src="/1040213-ui/png/039-search.png")
+				a(href="/users/search")
+					h1 Buscar
+		div.item
+			h1 Hello
+		div.item
+			div
+				figure
+					img(src="/1040213-ui/png/018-power.png")
+				a(href="/logout")
+					h1 Salir
+		div.item
+			div
+				figure
+					img(src="/1040213-ui/png/001-info.png")
+				a(href="/users/help")
+					h1 Ayuda
+		div.item
+			div
+				figure
+					img(src="/1040213-ui/png/040-compass.png")
+				a(href="/users/contact")
+					h1 Contacto
+

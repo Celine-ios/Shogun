@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
+body {
+	padding: 0;
+	margin: 0;
+}
+header {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	top: 0;
+	left: 0;
+	box-shadow: #0003 0px 0px 10px;
+	display: flex;
+	flex-direction: row;
+	background: #fff;
+}
+section {
+	margin-top: 8%;
+}
+ul {
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+}
+ul, li {
+	list-style-type: none;
+}
+.logo {
+	width: 19%;
+	padding: 0.5%;
+}
+.profile {
+	width: 79%;
+	padding: 0.5%;
+	display: flex;
+	justify-content: flex-end;
+}
+.grid {
+	display: grid;
+}
+.three-col-four-row {
+	grid-template-columns: 33.3% 33.3% 33.3%;
+	grid-template-rows: repeat(3,33vh);
+	grid-row-gap: 0.2em;
+	grid-column-gap: 0.1em;
+}
+.item {
+	height: 18em;
+	box-sizing: border-box;
+	padding: 2%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 98%;
+	color: #ddd;
+	font-family: 'Raleway', sans-serif;
+	transition: all .4s;
+}
+.item:hover {
+	box-shadow: #0000001a 0px 0px 10px;
+}
+.item div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+div a {
+	color: #ddd;
+	text-decoration: none;
+}
+.tooltip {
+    position: absolute;
+    width: 0%;
+    transition: all .3s;
+    top: 85%;
+    left: 74%;
+    background: #fff;
+    box-shadow: #ddd 0px 0px 10px;
+    padding: 2%;
+    font-family: 'Raleway', sans-serif;
+    visibility: hidden;
+}
+.tooltip hr {
+	color: #ddd;
+	border: 0.2px solid #ddd;
+}
+.tooltip a {
+	color: #222;
+	text-decoration: none;
+}
+.profile-holder {
+	display: flex;
+	justify-content: flex-end;
+}
+.profile-icon {
+	width: 10%;
+	height: 3em;
+}
+figure {
+	display: flex;
+	justify-content: center;
+}
+figure img {
+	width: 20%;
+	height: 4em;
+}
