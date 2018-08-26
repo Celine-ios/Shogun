@@ -64,7 +64,7 @@ router.post('/login', function(req, res){
                   session.email = response[0].email;
                   session.password = response[0].password;
 
-                  res.redirect('/users');
+                  res.render('/users');
                   console.log(response);
 
                }

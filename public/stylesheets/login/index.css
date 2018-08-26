@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
 
 body {
 	background: #ff512f; /* fallback for old browsers */
@@ -37,6 +38,11 @@ h2 {
 .form-label {
 	font-family: 'Raleway', sans-serif;
 	text-align: left;
+}
+ons-col h4 {
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: red;
 }
 
 

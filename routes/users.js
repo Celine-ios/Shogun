@@ -22,11 +22,21 @@ router.post('/search', (req, res) => {
 	var data = req.body;
 	console.log(data);
 	mongoose.connect('mongodb://localhost/shogun');
-   var userSchema = mongoose.Schema({
-      name: String,
-      email: String,
-      password: String
-      });
+   var productSchema = mongoose.Schema({
+   		id: Number,
+		name: String,
+		price: Number,
+		quantity: Number,
+		location: String
+   });
+   var Product = mongoose.model('Product', productSchema);
+   Product.find({$or: [{
+   		name: data.par
+   }, {
+   		location: data.par
+   }]}, (err, response) => {
+   		console.log(response);
+   });
 	res.send("Hello");
 });
 router.get('/advertising', (req, res) => {

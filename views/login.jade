@@ -28,6 +28,10 @@ html
 						ons-col(style="display: flex; justify-content: center;")
 							//ons-button(onclick="ons.notification.alert('Qlq');")(modifier="large") Iniciar Sesión
 							ons-button(type="submit")(modifier="large")(onclick="document.getElementsByName('form')[0].submit();") Iniciar Sesión
+				if status == 'logout'
+					ons-row
+						ons-col(style="display: flex; justify-content: center;")
+							h4 Acceso Inválido
 					ons-row(style="margin: 1% 0%;")
 						ons-col(style="display: flex; justify-content: center;")
 							ons-toolbar-button Olvidé mi Contraseña
