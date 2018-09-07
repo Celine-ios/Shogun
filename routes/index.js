@@ -19,10 +19,19 @@ router.get('/', function(req, res, next) {
 router.get('/login', function(req, res, next) {
 	res.render('login');
 });
+router.get('/logout', (req, res, next) => {
+   //console.log(session.Session().destroy());
+   console.log(session);
+   //console.log(session.Session(session.sessionID));
+   //console.log(session.Session());
+   res.send("Hello");
+   //res.redirect('/');
+
+});
 router.get('/signup', function(req, res, next) {
 	res.render('signup');
 });
-router.post('/login', function(req, res){
+router.post('/login', function(req, res) {
    var user = req.body;
    if (!user.email && !user.password) {
       res.render('login', {
@@ -64,7 +73,7 @@ router.post('/login', function(req, res){
                   session.email = response[0].email;
                   session.password = response[0].password;
 
-                  res.render('/users');
+                  res.redirect('/users');
                   console.log(response);
 
                }

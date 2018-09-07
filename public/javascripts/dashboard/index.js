@@ -10,5 +10,17 @@ var trigLine = () => {
 	      	trigLine();
 	    });
 	}
-	
+	// set Event for Logout Confirm Box
+	document.getElementById('confirm').addEventListener('click', (e) => {
+	  ons.notification.confirm({
+	  	message: '¿Está seguro de Salir?',
+	  	callback: function(answer) {
+	  		if (answer == 1) {
+	  			location.href = '/logout';
+	  		}
+	  	}
+	  });
+
+	});
+
 })();

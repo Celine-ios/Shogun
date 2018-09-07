@@ -44,5 +44,21 @@ ons-col h4 {
     -webkit-font-smoothing: antialiased;
     color: red;
 }
+@media screen and (max-width: 500px) {
+div h1 {
+	display: none;
+}
+.login-box {
+	width: 70%;
+	margin-top: 60%;
+}
+form ons-row {
+	padding: 4% 0% !important;
+}
+ons-col label {
+	margin-bottom: 6% !important;
+}
+}
+
 
 

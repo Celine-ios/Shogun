@@ -36,8 +36,10 @@ router.post('/search', (req, res) => {
    		location: data.par
    }]}, (err, response) => {
    		console.log(response);
+   		res.render("search", {
+		data: response
+	});
    });
-	res.send("Hello");
 });
 router.get('/advertising', (req, res) => {
 	res.render('advertising');

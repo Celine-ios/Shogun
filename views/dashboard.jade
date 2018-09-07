@@ -6,7 +6,7 @@ head
 	link(rel="stylesheet" href="onsenui/css/onsenui.css")
 	link(rel="stylesheet" href="onsenui/css/onsen-css-components.min.css")
 	script(src="onsenui/js/onsenui.min.js")
-body
+body(style="overflow: visible;")
 	header
 		div.logo
 			
@@ -51,7 +51,7 @@ body
 					h1 Buscar
 		div.item
 			h1 Hello
-		div.item(onclick="ons.notification.confirm('¿Está seguro de Salir?');")
+		div.item#confirm
 			div
 				figure
 					img(src="/1040213-ui/png/018-power.png")

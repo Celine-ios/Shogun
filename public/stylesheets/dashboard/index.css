@@ -117,6 +117,10 @@ figure img {
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
 }
+a h1 {
+	font-size: 1.4em;
+
+}
 @-webkit-keyframes Gradient {
 	0% {
 		background-position: 0% 50%
@@ -151,4 +155,22 @@ figure img {
 	100% {
 		background-position: 0% 50%
 	}
+}
+@media screen and (max-width: 500px) {
+.three-col-four-row {
+	margin-top: 23%;
+	grid-template-columns: 100%;
+   	grid-template-rows: repeat(9,43vh);
+	grid-row-gap: 0.2em;
+	grid-column-gap: 0.1em;
+}
+.profile-holder {
+	margin-right: 1.4em;
+}
+.profile-icon {
+	width: 20%;
+}
+figure img {
+	width: 24%;
+}
 }
